@@ -1,0 +1,7 @@
+@import 'tailwindcss';
+@import 'uniwind';
+
+@theme {
+  --color-primary: #F11E1E;
+  --font-sans: 'Ginger Joy';
+}

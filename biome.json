@@ -1,0 +1,158 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
+  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "files": {
+    "ignoreUnknown": false,
+    "includes": [
+      "**",
+      "!coverage/**",
+      "!android/**",
+      "!ios/**",
+      "!modules/react-native-upass/**",
+      "!global.css",
+      "!.vscode/extensions.json"
+    ]
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 109,
+    "attributePosition": "auto",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "expand": "auto",
+    "useEditorconfig": true
+  },
+  "linter": {
+    "enabled": true,
+    "domains": {
+      "react": "recommended",
+      "test": "recommended"
+    },
+    "rules": {
+      "recommended": false,
+      "complexity": {
+        "noStaticOnlyClass": "error",
+        "noUselessConstructor": "error",
+        "noUselessTypeConstraint": "error"
+      },
+      "correctness": { "noUnusedVariables": "error" },
+      "style": {
+        "noCommonJs": "error",
+        "noNamespace": "error",
+        "noNonNullAssertion": "error",
+        "useArrayLiterals": "error",
+        "useAsConstAssertion": "error",
+        "useLiteralEnumMembers": "error",
+        "useUnifiedTypeSignatures": "error"
+      },
+      "suspicious": {
+        "noConfusingVoidType": "error",
+        "noExplicitAny": "error",
+        "noExtraNonNullAssertion": "error",
+        "noMisleadingInstantiator": "error",
+        "noUnsafeDeclarationMerging": "error",
+        "useNamespaceKeyword": "error",
+        "noArrayIndexKey": "warn"
+      }
+    },
+    "includes": ["**", "!metro.config.js"]
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "always",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    },
+    "globals": []
+  },
+  "html": { "formatter": { "selfCloseVoidElements": "always" } },
+  "overrides": [
+    {
+      "includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+      "linter": {
+        "rules": {
+          "complexity": { "noArguments": "error" },
+          "correctness": {
+            "noConstAssign": "off",
+            "noGlobalObjectCalls": "off",
+            "noInvalidBuiltinInstantiation": "off",
+            "noInvalidConstructorSuper": "off",
+            "noSetterReturn": "off",
+            "noUndeclaredVariables": "off",
+            "noUnreachable": "off",
+            "noUnreachableSuper": "off"
+          },
+          "style": { "useConst": "error" },
+          "suspicious": {
+            "noClassAssign": "off",
+            "noDuplicateClassMembers": "off",
+            "noDuplicateObjectKeys": "off",
+            "noDuplicateParameters": "off",
+            "noFunctionAssign": "off",
+            "noImportAssign": "off",
+            "noRedeclare": "off",
+            "noUnsafeNegation": "off",
+            "noVar": "error",
+            "noWith": "off",
+            "useGetterReturn": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.mjs", "**/*.js", "**/*.jsx", "**/*.ts", "**/*.tsx"],
+      "linter": {
+        "rules": {
+          "complexity": { "noUselessRename": "error", "useFlatMap": "error", "useIndexOf": "error" },
+          "correctness": {
+            "noConstAssign": "error",
+            "noUnreachableSuper": "error",
+            "noUnusedImports": "warn",
+            "noUnusedLabels": "warn",
+            "noUnusedVariables": "warn",
+            "useExhaustiveDependencies": "off"
+          },
+          "style": {
+            "noCommonJs": "off",
+            "noSubstr": "error",
+            "useBlockStatements": "off",
+            "useConst": "error",
+            "useNodejsImportProtocol": "error",
+            "useNumberNamespace": "error",
+            "useNumericSeparators": "error"
+          },
+          "suspicious": {
+            "noConsole": "off",
+            "noConstantBinaryExpressions": "error",
+            "noExplicitAny": "warn",
+            "noIrregularWhitespace": "error",
+            "noVar": "error"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["**/*.ts", "**/*.tsx"],
+      "javascript": { "globals": [] },
+      "linter": {
+        "rules": {
+          "correctness": { "noUnusedVariables": "off" },
+          "style": { "noNamespace": "off", "noNonNullAssertion": "off" },
+          "suspicious": { "noConfusingVoidType": "off" }
+        }
+      }
+    },
+    { "includes": ["**/*.test.{ts,tsx}"], "linter": { "rules": {} } }
+  ],
+  "assist": { "enabled": true, "actions": { "source": { "organizeImports": "on" } } }
+}
