@@ -36,7 +36,7 @@ Projek ini mengutamakan konsep MVVM bersama dengan implementasi expo-router
 ### 1. Dapatkan projek
 
 ```bash
-  git clone https://git.penril.net/agro/agro-rib-mobile.git
+  git clone https://github.com/zaiehilmi/expo-boilerplate
 ```
 
 ### 2. Menjalankan projek
